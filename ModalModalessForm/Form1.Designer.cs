@@ -39,6 +39,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusTitle = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusMessage = new System.Windows.Forms.ToolStripStatusLabel();
+            this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modalessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +80,8 @@
             // 
             // sToolStripMenuItem
             // 
+            this.sToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.끝내기ToolStripMenuItem});
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.sToolStripMenuItem.Text = "파일";
@@ -84,6 +89,9 @@
             // 
             // 창띄우기ToolStripMenuItem
             // 
+            this.창띄우기ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modalToolStripMenuItem,
+            this.modalessToolStripMenuItem});
             this.창띄우기ToolStripMenuItem.Name = "창띄우기ToolStripMenuItem";
             this.창띄우기ToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.창띄우기ToolStripMenuItem.Text = "창 띄우기";
@@ -102,12 +110,14 @@
             this.이프로그램ModalToolStripMenuItem.Name = "이프로그램ModalToolStripMenuItem";
             this.이프로그램ModalToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.이프로그램ModalToolStripMenuItem.Text = "이 프로그램 (Modal)";
+            this.이프로그램ModalToolStripMenuItem.Click += new System.EventHandler(this.이프로그램은모달ToolStripMenuItem_Click);
             // 
             // 이프로그램ModalessToolStripMenuItem
             // 
             this.이프로그램ModalessToolStripMenuItem.Name = "이프로그램ModalessToolStripMenuItem";
             this.이프로그램ModalessToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.이프로그램ModalessToolStripMenuItem.Text = "이 프로그램 (Modaless)";
+            this.이프로그램ModalessToolStripMenuItem.Click += new System.EventHandler(this.이프로그램은모달리스ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -132,6 +142,27 @@
             this.statusMessage.Name = "statusMessage";
             this.statusMessage.Size = new System.Drawing.Size(12, 17);
             this.statusMessage.Text = "-";
+            // 
+            // 끝내기ToolStripMenuItem
+            // 
+            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.끝내기ToolStripMenuItem.Text = "끝내기";
+            this.끝내기ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
+            // 
+            // modalToolStripMenuItem
+            // 
+            this.modalToolStripMenuItem.Name = "modalToolStripMenuItem";
+            this.modalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modalToolStripMenuItem.Text = "Modal";
+            this.modalToolStripMenuItem.Click += new System.EventHandler(this.ModalToolStripMenuItem_Click);
+            // 
+            // modalessToolStripMenuItem
+            // 
+            this.modalessToolStripMenuItem.Name = "modalessToolStripMenuItem";
+            this.modalessToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modalessToolStripMenuItem.Text = "Modaless";
+            this.modalessToolStripMenuItem.Click += new System.EventHandler(this.ModalessToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -171,6 +202,9 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusTitle;
         private System.Windows.Forms.ToolStripStatusLabel statusMessage;
+        private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modalessToolStripMenuItem;
     }
 }
 
